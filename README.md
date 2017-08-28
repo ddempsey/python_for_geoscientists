@@ -22,4 +22,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* This course was inspired by a similar project, [Python for Geosciences](https://github.com/koldunovn/python_for_geosciences), by Nikolay Koldunovn. This course is included in the repository as supplementary material.
+* This course was inspired by a similar project, [Python for Geosciences](https://github.com/koldunovn/python_for_geosciences), by Nikolay Koldunovn. That course is included in the repository as supplementary material.
