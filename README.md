@@ -4,7 +4,7 @@ These Jupyter notebooks support a Python short course designed for curious geosc
 
 ## Getting Started
 
-Download and unzip a copy of this repository. Begin with the quick-start.pdf document.
+Download and unzip a copy of this repository. Begin with the quick-start.pdf document or open the [intro.ipynb](intro.ipynb) notebook.
 
 ### Prerequisites
 
