@@ -4,7 +4,7 @@ These Jupyter notebooks support a Python short course designed for curious geosc
 
 ## Getting Started
 
-Download and unzip a copy of this repository. Begin with the quick-start.pdf document or open the [intro.ipynb](intro.ipynb) notebook.
+Download and unzip a copy of this repository. Begin with the quick-start.pdf document or open the intro.ipynb notebooks.
 
 ### Prerequisites
 
@@ -18,7 +18,7 @@ You will also need to download a copy of [ffmpeg](https://www.ffmpeg.org/).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
 ## Acknowledgments
 

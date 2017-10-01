@@ -1,0 +1,2 @@
+jupyter nbextension enable codefolding/main
+jupyter nbextension enable collapsible_headings/main
