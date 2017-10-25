@@ -4,17 +4,35 @@ import numpy as np
 
 # function to create frames
 def plot_frame(i,a):
-    ''' Plots a single frame of a sine function with frequency a.
+    ''' Plots a single frame of the fault rupture, at position a.
     
         i = frame number
-        a = frequency
+        a = position of rupture front
+        
+        Stress changes are computed according to linear elastic fracture mechanics.
+        s = s0 for x>>a         (far field stress)
+        s = s0-ds for x<a       (stress drop inside rupture)
+        s ~ K/sqrt(x) for x>a   (decaying stresses with singularity at crack tip)
     '''
     f,ax = plt.subplots(1,1)
-    x = np.linspace(0,2.*np.pi,101)
-    y = np.sin(a*x)
-    ax.plot(x,y)
+    x = np.linspace(0,10.,1001)
+    
+    # calculate the stress field
+    s0 = 25.                      # pre-earthquake stress
+    ds = 3.                       # stress drop
+    K = s0*np.sqrt(np.pi*a)       # stress intensity factor
+    y = s0*np.ones(len(x))        # background stress vector
+    y[np.where(x<a)] = s0-ds      # stress behind the rupture
+    # stress increase in front of the rupture
+    y[np.where(x>=a)] = s0+K/np.sqrt(2*np.pi*(x[np.where(x>=a)]-a)*1.e3) 
+    
+    # plot the stress changes
+    ax.plot(x,y,'k-')                  # plot stress changes
+    ax.plot([a,a], [s0-ds, 30], 'k:')  # stress singularity
     ax.set_xlim([x[0], x[-1]])
-    ax.set_ylim([-1.1, 1.1])
+    ax.set_ylim([21, 30])
+    ax.set_xlabel('position along fault / km')
+    ax.set_ylabel('stress / MPa')
     
     # save the frame in a separate folder and name it using the index i
     plt.savefig('all_frames/frame{:04d}.png'.format(i), dpi=300)
@@ -38,7 +56,7 @@ for i,a in enumerate(avals):               # enumerate is a handy function that 
     plot_frame(i,a)                        # AND gives you a corresponding index
 	
 # we'll use os.system - a handy command that let's us implement command line calls without returning to the command line
-os.system('ffmpeg -framerate {:d} -i all_frames/frame%04d.png movie.mp4'.format(FPS))
+os.system('ffmpeg -framerate {:d} -i all_frames/frame%04d.png earthquake_movie.mp4'.format(FPS))
 
 # tidy up the frames
 from glob import glob
