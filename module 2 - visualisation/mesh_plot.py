@@ -34,5 +34,5 @@ ax.plot_wireframe(X, Y, r(X,Y), lw = 0.5, color = 'k')
 CS = ax.plot_surface(X2, Y2, r(X2,Y2), rstride=1, cstride=1,cmap=cm.Oranges, lw = 0.5)
 plt.colorbar(CS, ax=ax)
 
-# save the figure to a file
-plt.savefig('mesh_plot.png', dpi = 300)      # dpi is the resolution, 300 is good for many applications
+# display the interactive figure to the screen
+plt.show()
