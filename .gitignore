@@ -1,9 +1,9 @@
 .ipynb_checkpoints
 *.docx
 *.exe
-module 1 - data/nd_eqs.txt
-module 1 - data/my_first_novel.txt
-module 1 - data/archived_book2.txt
-module 2 - visualisation/my_empty_figure.png
-module 2 - visualisation/earthquake_movie.mp4
-module 1 - data/txt_files
+1_data/nd_eqs.txt
+1_data/my_first_novel.txt
+1_data/archived_book2.txt
+1_data/txt_files
+2_visualisation/my_empty_figure.png
+2_visualisation/earthquake_movie.mp4

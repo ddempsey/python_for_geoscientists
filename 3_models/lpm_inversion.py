@@ -32,7 +32,7 @@ def lpm_wk(t,a,b,c,q_future = None):
     p0 = 56.26e5              # initial reservoir pressure [Pa]
 
     # load production history
-    tq,q = np.genfromtxt('production_history.csv', delimiter = ',', unpack=True)
+    tq,q = np.genfromtxt('../data/wk_production_history.csv', delimiter = ',', unpack=True)
     # append future flow rate if appropriate
     if q_future is not None:
         tq = np.concatenate([tq, np.arange(tq[-1]+1, tq[-1]+51, 1)])
@@ -63,7 +63,7 @@ from scipy.optimize import curve_fit                     # the function we'll be
 
 # let's see how it works!
     # load in the data again
-tp, p = np.genfromtxt('pressure_history.csv', delimiter=',', unpack=True)
+tp, p = np.genfromtxt('../data/wk_pressure_history.csv', delimiter=',', unpack=True)
     # define an initial guess for the parameters
 par_i = [5, 8, -3]
 par, pcov = curve_fit(lpm_wk, tp, p, par_i)
