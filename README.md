@@ -1,6 +1,6 @@
 # Python for Geoscientists
 
-These Jupyter notebooks support a Python short course designed for curious geoscientists. The course is suitable for any coding background. It begins with elementary Python concepts and builds iteratively upon these to produce some almost sophisticated examples. The content is organised into four modules: Introduction to Python, Managing your Data, Visualising your Data, and Modelling your Data. 
+These Jupyter notebooks support a Python short course designed for curious geoscientists and engineers. The course is suitable for any coding background. It begins with elementary Python concepts and builds iteratively upon these to produce some almost sophisticated examples. The content is organised into four modules: Introduction to Python, Managing your Data, Visualising your Data, and Modelling your Data. 
 
 ## Getting Started
 
@@ -22,4 +22,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 ## Acknowledgments
 
-* This course was inspired by a similar project, [Python for Geosciences](https://github.com/koldunovn/python_for_geosciences), by Nikolay Koldunovn. That course is included in the repository as supplementary material.
+* This course was inspired by a similar project, [Python for Geosciences](https://github.com/koldunovn/python_for_geosciences), by Nikolay Koldunovn. 
